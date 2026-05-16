@@ -5,17 +5,23 @@
   font-weight: 400;
   font-style: normal;
 }
-
+html{
+  font-size: 16px;
+}
 *{
     margin: 0;
 }
+
 /* Shared styles */
 .display-flex{
     display: flex;
+
+    gap: 1rem;
 }
 .section{
     margin: 0 auto;
     max-width: 1440px;
+    padding: 3rem 2rem;
 }
 
 /* Dark-2 */
@@ -35,23 +41,23 @@
 .bg-color{
     background-color: rgba(255, 144, 14, 0.1);
 }
-/* Header Title */
+/* Title */
 .header-title{
-    font-size: 72px;
+    font-size: 4rem;
     font-weight: 700;
 }
-/* Section title */
+
 .section-title, .brand-name{
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 700;
+    padding-top: 0;
+    padding-bottom: 0;
 }
-/* sub title */
 .sub-title{
     font-size: 1.2rem;
     font-weight: 500;
 }
 .description{
-    font-size: 1rem;
     font-weight: 400;
     color: #727272;
 }
@@ -64,46 +70,107 @@
     color: white;
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
 }
+/* .btn-primary :hover{
+    background-color: green;
+    color: white;
+} */
 .margin{
     margin: 30px 0;
 }
 
 
+
 /* Header Section Styles */
+
 
 /* Navbar Styles */
 .navbar{
     justify-content: space-between;
+    justify-items: center;
     align-items: center;
-    padding: 50px 0;
-
+    padding: 30px 20px;
 }
-/* li{
-    text-decoration: none;
-} */
-/* .nav-items{
-    gap: 50px;
-} */
+
 .nav-items li{
     list-style: none;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 .nav-items a{
     text-decoration: none;
     color: #424242;
 }
 
+
 /* Header Container Styles */
 .header-container{
     text-align: center;
     justify-items: center;
     padding-bottom: 30px;
-
 }
 .header-content{
-    width: 850px;
+    max-width: 850px;
 }
 .header-container img{
     width: 100%;
 }
+
+/* Features Explore Styles */
+.features-container{
+    gap: 3rem;
+    align-items: center;
+
+}
+.features-images{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.features-images img{
+    width: 100%;
+}
+
+/* Container right */
+.features-content{
+    width: 50%;
+    text-align: center;
+}
+.features-content p{
+    margin:2rem;
+
+}
+
+
+
+
+
+
+/* Responsive for Small Devices (>576px) */
+@media screen and (max-width: 576px){
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        text-align: center;
+
+    }
+    .nav-items{
+        justify-items: center;
+        padding-left: 0%;
+    }
+
+    /* Features Explore */
+    .features-container{
+        flex-direction:column-reverse;
+    }
+    .features-images{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .features-content{
+        width: 100%;
+
+    }
+
+}
+
